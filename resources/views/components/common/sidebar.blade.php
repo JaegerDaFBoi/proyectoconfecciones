@@ -43,6 +43,12 @@
         </a>
       </li>
       <li>
+        <a href="{{ route('clientes.index') }}">
+          <i class="nc-icon nc-badge"></i>
+          <p>Clientes</p>
+        </a>
+      </li>
+      {{-- <li>
         <a data-toggle="collapse" href="#pagesExamples">
           <i class="nc-icon nc-book-bookmark"></i>
           <p>
@@ -83,7 +89,7 @@
             </li>
           </ul>
         </div>
-      </li>
+      </li> --}}
       {{-- <li>
         <a data-toggle="collapse" href="#componentsExamples">
           <i class="nc-icon nc-layout-11"></i>

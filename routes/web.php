@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClienteController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -27,5 +28,8 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+//Clientes
+Route::get('/clientes/index', [ClienteController::class, 'index'])->name('clientes.index');
 
 
