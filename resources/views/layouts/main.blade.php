@@ -97,6 +97,7 @@
 
         });
     </script>
+    @livewireScripts
     @yield('scripts')
 </body>
 

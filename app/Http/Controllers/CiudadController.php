@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ciudad;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class CiudadController extends Controller
 {
@@ -35,7 +36,11 @@ class CiudadController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ciudad = new Ciudad();
+        $ciudad->ciudad = $request->ciudadModal;
+        $ciudad->departamento_id = $request->departamentoModal;
+        $ciudad->save();
+        return Redirect::route('clientes.create');
     }
 
     /**

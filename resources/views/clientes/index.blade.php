@@ -9,7 +9,7 @@
     </nav>
     <div class="row">
       <div class="col-md-12">
-        <a href="" class="btn btn-warning btn-round">
+        <a href="{{ route('clientes.create') }}" class="btn btn-warning btn-round">
           Crear Cliente
         </a>
       </div>
@@ -34,7 +34,16 @@
                   </tr>
                 </thead>
                 <tbody>
-
+                  @foreach ($clientes as $cliente)
+                    <tr>
+                      <td class="text-center">{{ $cliente->id_cliente }}</td>
+                      <td>{{ $cliente->nit }}</td>
+                      <td>{{ $cliente->razon_social }}</td>
+                      <td>{{ $cliente->telefono }}</td>
+                      <td>{{ $cliente->direccion }}</td>
+                      <td>{{ $cliente->ciudad->ciudad }}</td>
+                    </tr>
+                  @endforeach
                 </tbody>  
               </table>
             </div>

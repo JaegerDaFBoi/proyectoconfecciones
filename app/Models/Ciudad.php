@@ -10,14 +10,15 @@ class Ciudad extends Model
     use HasFactory;
 
     protected $table = 'ciudades';
+    protected $primaryKey = 'id_ciudad';
 
     public function departamento()
     {
-        return $this->belongsTo(Departamento::class, 'departamento_id');
+        return $this->belongsTo(Departamento::class, 'departamento_id', 'id_ciudad');
     }
 
     public function clientes()
     {
-        return $this->hasMany(Cliete::class, 'ciudad_id');
+        return $this->hasMany(Cliente::class, 'ciudad_id');
     }
 }
